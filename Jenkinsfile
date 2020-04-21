@@ -10,8 +10,8 @@ pipeline {
        stages {
         stage('Build') { 
             steps {
-                sh "sudo npm install --unsafe-perm=true --allow-root"
-                // sh 'npm install' 
+                // sh "sudo npm install --unsafe-perm=true --allow-root"
+                sh 'npm install' 
             }
         }
         }
