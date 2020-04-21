@@ -9,6 +9,7 @@ pipeline {
         stage('Build') { 
             steps {
                 // sh "sudo npm install --unsafe-perm=true --allow-root"
+                sh "echo herrererererer"
                 sh 'npm install' 
             }
         }
