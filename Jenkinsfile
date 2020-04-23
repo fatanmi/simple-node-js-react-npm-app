@@ -1,6 +1,11 @@
 pipeline {
-    agent {
-       node ('non-docker-agent') {
+   
+}}
+        
+       stages {
+        stage('Build') { 
+            steps {
+                node ('non-docker-agent') {
 
     docker.withServer($DOCKER_SERVER) {
 
@@ -10,15 +15,6 @@ pipeline {
             sh "hostname"
         }
 
-    }
-}}
-        
-       stages {
-        stage('Build') { 
-            steps {
-                
-                //sh 'npm install' 
-                sh "docker ps"
             }
         }
         }
